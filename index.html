@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <div
+      class="bg-black w-full min-h-screen flex items-center justify-center flex-col"
+    >
+    
+      <div class="w-[400px] h-[500px] border border-white rounded-2xl">
+        <div class="">
+          <input
+            type="text"
+            class="bg-black w-full h-20 border text-[50px] font-bold border-white ps-6 rounded-2xl p-3 text-white cursor-pointer"
+            placeholder="0"
+            id="output"
+
+          />
+        </div>
+        <div>
+          <div class="flex items-center justify-center gap-5 mt-5">
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold border border-black rounded-xl text-2xl cursor-pointer" onclick="clearAll()" id="clear"
+            >
+              AC
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold border border-black rounded-xl text-2xl cursor-pointer" onclick="removeLast()" id="delete"
+            >
+              DEL
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold border  border-black rounded-xl text-2xl cursor-pointer" onclick="display('%')" id="percentage"
+            >
+              %
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold border border-black rounded-xl text-2xl cursor-pointer" onclick="display('+')" id="plus"
+            >
+              +
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-5 mt-5">
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('7')" id="seven"
+            >
+              7
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('8')" id="eight"
+            >
+              8
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('9')" id="nine"
+            >
+              9
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold border border-black rounded-xl text-2xl cursor-pointer" onclick="display('-')" id="minus"
+            >
+              -
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-5 mt-5">
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('6')" id="six"
+            >
+              6
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('5')" id="five"
+            >
+              5
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('4')" id="four"
+            >
+              4
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold text-2xl border border-black rounded-xl cursor-pointer" onclick="display('*')" id="multiply"
+            >
+              *
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-5 mt-5">
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('3')" id="three"
+            >
+              3
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('2')" id="two"
+            >
+              2
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('1')" id="one"
+            >
+              1
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold border border-black rounded-xl text-2xl cursor-pointer" onclick="display('/')" id="divide"
+            >
+              /
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-5 mt-5">
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('0')" id="zero"
+            >
+              0
+            </div>
+            <div
+              class="w-[60px] h-[50px] flex items-center justify-center bg-black text-white font-bold border-[2px] border-yellow-600 rounded-xl text-2xl cursor-pointer" onclick="display('.')" id="dot"
+            >
+              .
+            </div>
+            <div
+              class="w-[140px] h-[50px] flex items-center justify-center bg-yellow-600 font-bold border border-black rounded-xl text-2xl cursor-pointer" onclick="evaluateExp()" id="equal"
+            >
+              =
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="calculator.js"></script>
+</html>
